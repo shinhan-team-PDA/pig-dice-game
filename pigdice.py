@@ -12,8 +12,8 @@ class Player:
         return self.tmp_score
     
     # Roll 기능 구현
-    def roll_dice() -> int:
-        dice_num = randint(1,6+1)
+    def roll_dice(self) -> int:
+        self.dice_num = randint(1,6+1)
         if self.should_stop(dice_num) :
             self.bank()
         else:
@@ -23,12 +23,12 @@ class Player:
     # type(r,s) 판단
     def should_roll(self, type_):
         if type_ == 'r':
-            roll_dice()
+            self.roll_dice()
         else :
             self.bank()
     
     # Roll stop
-    def should_stop(dice: int) -> bool:
+    def should_stop(self,dice: int) -> bool:
         if dice == 1:
             return True
         else:
