@@ -10,6 +10,29 @@ class Player:
     def bank(self):
         self.total_score += self.tmp_score
         return self.tmp_score
+    
+    # Roll 기능 구현
+    def roll_dice() -> int:
+        dice_num = randint(1,6+1)
+        if self.should_stop(dice_num) :
+            self.bank()
+        else:
+            self.tmp_score += dice_num
+        return dice_num
+    
+    # type(r,s) 판단
+    def should_roll(self, type_):
+        if type_ == 'r':
+            roll_dice()
+        else :
+            self.bank()
+    
+    # Roll stop
+    def should_stop(dice: int) -> bool:
+        if dice == 1:
+            return True
+        else:
+            return False
 
 
 class Computer(Player):
@@ -23,7 +46,6 @@ class User(Player):
         Player.__init__(self)
         self.user_name = name
 
-
 # 사용자 정보 받기
 def input_user():
     print("============================")
@@ -31,17 +53,5 @@ def input_user():
     user_name = input("Please Enter Your NAME: ")
     return User(user_name), Computer()
 
-# Roll 기능 구현
-def roll_dice() -> int:
-    dice_num = randint(1,6+1)
-    return dice_num
 
 
-# Bank 기능 구현
-
-# Roll stop
-def should_stop(dice: int) -> bool:
-    if dice == 1:
-        return True
-    else:
-        return False
