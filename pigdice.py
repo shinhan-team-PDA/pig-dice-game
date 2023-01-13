@@ -26,13 +26,6 @@ class Player:
         return dice_num
 
     # type(r,s) 판단
-    def should_roll(self, type_):
-        if type_ == 'r':
-            return True
-        else:
-            self.bank()
-            print(f"{self.name}의 총점은 {self.total_score}점 입니다.")
-            return False
 
     # Roll stop
     def should_stop(self, dice: int) -> bool:
@@ -66,6 +59,14 @@ class Computer(Player):
 class User(Player):
     def __init__(self, name):
         Player.__init__(self, name)
+
+    def should_roll(self, type_):
+        if type_ == 'r':
+            return True
+        else:
+            self.bank()
+            print(f"{self.name}의 총점은 {self.total_score}점 입니다.")
+            return False
 
 
 # 사용자 정보 받기
