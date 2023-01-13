@@ -40,3 +40,8 @@ def roll_dice() -> int:
 # Bank 기능 구현
 
 # Roll stop
+def should_stop(dice: int) -> bool:
+    if dice == 1:
+        return True
+    else:
+        return False
