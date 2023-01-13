@@ -4,8 +4,8 @@ from random import randint
 # class computer
 class Player:
     def __init__(self):
-        self.score = 0
-        self.bank = 0
+        self.total_score = 0
+        self.tmp_score = 0
 
     def bank(self):
         self.score += self.bank
