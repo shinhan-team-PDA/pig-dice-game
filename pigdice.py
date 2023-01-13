@@ -44,6 +44,15 @@ class Player:
 class Computer(Player):
     def __init__(self):
         Player.__init__(self)
+        self.roll_num = randint(1, 10 + 1)
+
+    def computer_roll(self):
+        for _ in range(self.roll_num):
+            dice = self.roll_dice()
+            if self.should_stop(dice):
+                break
+
+
 
 
 # class user
