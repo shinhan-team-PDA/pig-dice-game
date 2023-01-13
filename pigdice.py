@@ -42,15 +42,6 @@ def roll_dice() -> int:
 # Roll stop
 def should_stop(dice: int) -> bool:
     if dice == 1:
-        return False
-    else:
         return True
-
-
-
-
-
-
-
-=======
->>>>>>> 012d6c7d7060b3f1cfe592c1ff28f8e635c1d1fa
+    else:
+        return False
