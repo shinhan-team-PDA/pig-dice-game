@@ -13,7 +13,7 @@ class Player:
     
     # Roll 기능 구현
     def roll_dice(self) -> int:
-        self.dice_num = randint(1,6+1)
+        dice_num = randint(1,6+1)
         if self.should_stop(dice_num) :
             self.bank()
         else:
