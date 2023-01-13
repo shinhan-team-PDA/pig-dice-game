@@ -7,6 +7,10 @@ from random import randint
 # 사용자 정보 받기
 
 # Roll 기능 구현
+def roll_dice() -> int:
+    dice_num = randint(1,6+1)
+    return dice_num
+
 
 # Bank 기능 구현
 
