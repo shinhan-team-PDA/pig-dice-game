@@ -8,8 +8,8 @@ class Player:
         self.tmp_score = 0
 
     def bank(self):
-        self.score += self.bank
-        return self.score
+        self.total_score += self.tmp_score
+        return self.tmp_score
 
 
 class Computer(Player):
