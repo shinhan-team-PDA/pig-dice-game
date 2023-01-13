@@ -34,6 +34,12 @@ class Player:
         else:
             return False
 
+    def is_win(self):
+        if self.total_score >= 50:
+            return True
+        else:
+            return False
+
 
 class Computer(Player):
     def __init__(self):
@@ -52,6 +58,4 @@ def input_user():
     print("welcome to pig dice game!")
     user_name = input("Please Enter Your NAME: ")
     return User(user_name), Computer()
-
-
 
